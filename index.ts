@@ -9,5 +9,7 @@ const { port } = config;
 expressInit(app);
 
 mongoInit().then(() =>
-    app.listen(port, () => console.log("Listening in port", port))
+    app.listen(port, () => {  
+        console.log("Listening in port", port)
+    })
 );
