@@ -6,7 +6,7 @@ export default class Home {
     }
 
     get(id: any) {
-        return this.Model.find({ id });
+        return this.Model.findOne({ id });
     }
 
     create(data: any) {
