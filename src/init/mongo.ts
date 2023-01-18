@@ -17,7 +17,7 @@ export default () =>
             //  useUnifiedTopology: true
             // }
         )
-        .then(() => {
+        .then((it) => {
             console.log("Connected to MongoDB");
         })
         .catch(() => {
