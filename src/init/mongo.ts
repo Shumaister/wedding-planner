@@ -5,22 +5,23 @@ import config from "../config";
 mongoose.Promise = Promise;
 
 const {
-    mongo: { uri }
+  mongo: { uri }
 } = config;
 
 export default () =>
-    mongoose
-        .connect(uri
-            //, {
-            // useCreateIndex: true,
-            //useNewUrlParser: true,
-            //  useUnifiedTopology: true
-            // }
-        )
-        .then((it) => {
-            console.log("Connected to MongoDB");
-        })
-        .catch(() => {
-            console.log("Connection to MongoDB failed");
-            process.exit(1);
-        });
+  mongoose
+    .connect(
+      uri
+      //, {
+      // useCreateIndex: true,
+      //useNewUrlParser: true,
+      //  useUnifiedTopology: true
+      // }
+    )
+    .then(it => {
+      console.log("Connected to MongoDB");
+    })
+    .catch(() => {
+      console.log("Connection to MongoDB failed");
+      process.exit(1);
+    });
