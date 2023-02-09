@@ -5,15 +5,19 @@ export default class Home {
     this.Model = Model;
   }
 
-  get(id: any) {
-    return this.Model.findOne({ id });
+  public getById(id: any) {
+    return this.Model.findOne({ _id: id });
   }
 
-  create(data: any) {
+  public create(data: any) {
     return this.Model.create(data);
   }
 
-  update(id: any, data: any) {
+  public update(id: any, data: any) {
     return this.Model.update({ id }, data);
+  }
+
+  public delete(id: string) {
+    return this.Model.delete({ id });
   }
 }
